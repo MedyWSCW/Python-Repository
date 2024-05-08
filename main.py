@@ -59,11 +59,12 @@ while play == "yes":
     else:
      print("Incorrect")
     #Tell them the correct answer
-    print ("The answer is Loki")
+    print ("The answer is Brooklyn")
     #End the quiz
     print ("Well done {}. That's the end. Your final score is {}".format (name,score ))
     print ("Thanks for playing!")
     #Replay
+    score = 0
     play = input("Do you want to play again?").lower()
 
 print("Goodbye")
