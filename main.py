@@ -23,7 +23,7 @@ while True:
 
 #while play
 while play == "yes":
-    
+
     question_atempts1 = tries
     while question_atempts1 > 0:
         score = 0
@@ -50,8 +50,7 @@ while play == "yes":
     question_atempts1 -=1
     print ("The answer is Peter Parker")
 
-#while play
-while play == "yes":
+    #while play
     
     question_atempts2 = tries
     while question_atempts2 > 0:
@@ -77,16 +76,19 @@ while play == "yes":
         question_atempts2 -=1
     print ("The answer is Loki")
 
-    
-    question3 = "What city does miles morales live in?".lower()
-    a = "Seattle"
-    b = "Brooklyn"
-    c = "Chicago"
-    d = "Portland"
-    answer = input (QUESTION_FORMAT.format(question3, a, b, c, d)).lower()
+    question_atempts3 = tries
+    while question_atempts3 > 0:
+
+        question3 = "What city does miles morales live in?".lower()
+        a = "Seattle"
+        b = "Brooklyn"
+        c = "Chicago"
+        d = "Portland"
+        answer = input (QUESTION_FORMAT.format(question3, a, b, c, d)).lower()
     if answer == b or answer == "b":
         print ("Correct! you got 5 points.")
         score += 5
+        breakpoint
     elif answer == "":
             print ("Not sure?")
     elif  answer != a and answer != "a" and answer != b and answer != "b" and answer != c and answer != "c" and answer != d and answer != "d":
@@ -94,17 +96,17 @@ while play == "yes":
     else:
         print("Incorrect")
 
-
     #Tell them the correct answer
-    print ("The answer is Brooklyn")
+    question_atempts3 -=1
+print ("The answer is Brooklyn")
 
     #End the quiz
-    print ("Well done {}. That's the end. Your final score is {}".format (name,score ))
-    print ("Thanks for playing!")
+print ("Well done {}. That's the end. Your final score is {}".format (name,score ))
+print ("Thanks for playing!")
 
 
     #Replay
-    score = 0
-    play = input("Do you want to play again?").lower()
+score = 0
+play = input("Do you want to play again?").lower()
 
 print("Goodbye")
