@@ -1,8 +1,8 @@
 
 
-
+import random
 GOOD_COMMENTS = ["Amazing!", "Keep it up!", "Fantastic!"]
-BAD_COMMENTS = ["How bad can you be!!", "Keep trying", "You are horrible!"]
+BAD_COMMENTS = ["How bad can you be!", "Keep trying", "You are horrible!"]
 
 play = "yes"
 QUESTION_FORMAT = "{}\n A. {}\n B. {}\n C. {}\n D. {}\nAnswer here: "
@@ -30,8 +30,8 @@ while True:
 while play == "yes":
     score = 0
 
-    question_atempts1 = tries
-    while question_atempts1 > 0:
+    question_atempts = tries
+    while question_atempts > 0:
         score = 0
         #Ask the user a question
         question1 = "What is spidermans real name? "
@@ -43,6 +43,7 @@ while play == "yes":
         if answer == a or answer == "a":
             print ("Correct! you got 5 points.")
             score += 5
+            print(random.choice (GOOD_COMMENTS))
             break
         elif answer == "":
             print ("Not sure?")
@@ -50,16 +51,17 @@ while play == "yes":
             print ("That wasnt an option")
         else:
             print("Incorrect")
+            print(random.choice (BAD_COMMENTS))
 
         
     #Tell them the correct answer
-        question_atempts1 -=1
+        question_atempts -=1
     print ("The answer is Peter Parker")
 
     #while play
     
-    question_atempts2 = tries
-    while question_atempts2 > 0:
+    question_atempts = tries
+    while question_atempts > 0:
         #Ask the user a question
         question2 = "Which of these charatcers isnt a batman villian? ".lower()
         a = "Joker"
@@ -70,6 +72,7 @@ while play == "yes":
         if answer == c or answer == "c":
             print ("Correct! you got 5 points.")
             score += 5
+            print(random.choice (GOOD_COMMENTS))
             break
         elif answer == "":
             print ("Not sure?")
@@ -77,13 +80,14 @@ while play == "yes":
             print ("That wasnt an option")
         else:
             print("Incorrect")
+            print(random.choice (BAD_COMMENTS))
                 
         #Tell them the correct answer
-        question_atempts2 -=1
+        question_atempts -=1
     print ("The answer is Loki")
 
-    question_atempts3 = tries
-    while question_atempts3 > 0:
+    question_atempts = tries
+    while question_atempts > 0:
 
         question3 = "What city does miles morales live in?".lower()
         a = "Seattle"
@@ -94,6 +98,7 @@ while play == "yes":
         if answer == b or answer == "b":
             print ("Correct! you got 5 points.")
             score += 5
+            print(random.choice (GOOD_COMMENTS))
             break
         elif answer == "":
             print ("Not sure?")
@@ -101,9 +106,10 @@ while play == "yes":
                 print ("That wasnt an option")
         else:
             print("Incorrect")
+            print(random.choice (BAD_COMMENTS))
 
         #Tell them the correct answer
-        question_atempts3 -=1
+        question_atempts -=1
         print ("The answer is Brooklyn")
 
     #End the quiz
