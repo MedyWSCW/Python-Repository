@@ -10,7 +10,13 @@ QUESTION_FORMAT = "{}\n A. {}\n B. {}\n C. {}\n D. {}\nAnswer here: "
 
 # Ask the user their name and store it
 name = input ("What is your Name? ")
+if name == "Daequan":
+    print("Its a Monkey!")
+    print("I never knew a monkey would play this quiz.")
 
+if name == "James":
+    print("Its the guy with the massive forehead!")
+    print("you better use that massive forehead for this quiz.")
 
 #Greet the user and introduce the quiz
 print ( "Welcome to this quiz",name)
@@ -34,7 +40,7 @@ while play == "yes":
     while question_atempts > 0:
         score = 0
         #Ask the user a question
-        question1 = "What is spidermans real name? "
+        question1 = "What is spidermans real name?"
         a = "Peter Parker"
         b = "Bruce Banner"
         c = "Tony Stark"
@@ -53,7 +59,14 @@ while play == "yes":
             print("Incorrect")
             print(random.choice (BAD_COMMENTS))
 
-        
+        QUESTION_FORMAT = "{}\nA.{}B.{}C.{}D."
+        QUESTIONS = ["What is spidermans real name?",
+                     "Which of these charatcers isnt a batman villian?",
+                     "What city does miles morales live in?"]
+        OPTIONS = [["Peter Parker","Bruce Banner","Tony Stark","Steve Rogers"],
+                   ["Joker","Scarecrow","Loki","Penguin"],
+                   ["Seattle","Brooklyn","Chicago","Portland"]]
+        SHORT_OPTIONS = {"a","b","c","d"}
     #Tell them the correct answer
         question_atempts -=1
     print ("The answer is Peter Parker")
@@ -63,7 +76,7 @@ while play == "yes":
     question_atempts = tries
     while question_atempts > 0:
         #Ask the user a question
-        question2 = "Which of these charatcers isnt a batman villian? ".lower()
+        question2 = "Which of these charatcers isnt a batman villian?".lower()
         a = "Joker"
         b = "Scarecrow"
         c = "Loki"
