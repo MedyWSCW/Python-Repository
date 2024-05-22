@@ -3,6 +3,15 @@
 import random
 GOOD_COMMENTS = ["Amazing!", "Keep it up!", "Fantastic!"]
 BAD_COMMENTS = ["How bad can you be!", "Keep trying", "You are horrible!"]
+QUESTION_FORMAT = "{}\nA.{}B.{}C.{}D."
+QUESTIONS = ["What is spidermans real name?",
+               "Which of these charatcers isnt a batman villian?",
+                "What city does miles morales live in?"]
+OPTIONS = [["Peter Parker","Bruce Banner","Tony Stark","Steve Rogers"],
+                   ["Joker","Scarecrow","Loki","Penguin"],
+                   ["Seattle","Brooklyn","Chicago","Portland"]]
+SHORT_OPTIONS = {"a","b","c","d"}
+ANSWERS = {0,2,1}
 
 play = "yes"
 QUESTION_FORMAT = "{}\n A. {}\n B. {}\n C. {}\n D. {}\nAnswer here: "
@@ -40,33 +49,25 @@ while play == "yes":
     while question_atempts > 0:
         score = 0
         #Ask the user a question
-        question1 = "What is spidermans real name?"
-        a = "Peter Parker"
-        b = "Bruce Banner"
-        c = "Tony Stark"
-        d = "Steve Rogers"
-        answer = input (QUESTION_FORMAT.format(question1, a, b, c, d)).lower()
-        if answer == a or answer == "a":
+        
+        answer = input (QUESTION_FORMAT.format(QUESTIONS[0],OPTIONS[0][0],
+                                                OPTIONS[0][1], OPTIONS[0][2],OPTIONS[0][3])).lower()
+        
+        if answer == OPTIONS[0][ANSWERS [0]] or answer == SHORT_OPTIONS[ANSWERS[0]]:
             print ("Correct! you got 5 points.")
             score += 5
             print(random.choice (GOOD_COMMENTS))
             break
-        elif answer == "":
-            print ("Not sure?")
-        elif  answer != a and answer != "a" and answer != b and answer != "b" and answer != c and answer != "c" and answer != d and answer != "d":
-            print ("That wasnt an option")
-        else:
-            print("Incorrect")
-            print(random.choice (BAD_COMMENTS))
 
-        QUESTION_FORMAT = "{}\nA.{}B.{}C.{}D."
-        QUESTIONS = ["What is spidermans real name?",
-                     "Which of these charatcers isnt a batman villian?",
-                     "What city does miles morales live in?"]
-        OPTIONS = [["Peter Parker","Bruce Banner","Tony Stark","Steve Rogers"],
-                   ["Joker","Scarecrow","Loki","Penguin"],
-                   ["Seattle","Brooklyn","Chicago","Portland"]]
-        SHORT_OPTIONS = {"a","b","c","d"}
+        elif answer in SHORT_OPTIONS or answer in OPTIONS[0]:
+            print ("Wrong!")
+            print(random.choice (BAD_COMMENTS))
+          
+        else:
+            print("That was not a option")
+            
+
+
     #Tell them the correct answer
         question_atempts -=1
     print ("The answer is Peter Parker")
