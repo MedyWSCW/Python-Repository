@@ -109,7 +109,7 @@ while play == "yes":
             print(random.choice (BAD_COMMENTS))
 
         #Tell them the correct answer
-        question_atempts -=1
+        question_atempts1 -=1
         print ("The answer is Brooklyn")
 
     #End the quiz
