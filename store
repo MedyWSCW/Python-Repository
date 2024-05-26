@@ -1,0 +1,59 @@
+
+
+    #Tell them the correct answer
+        question_atempts -=1
+    print ("The answer is Peter Parker")
+
+    #while play
+    
+    question_atempts = tries
+    while question_atempts > 0:
+        #Ask the user a question
+        question2 = "Which of these charatcers isnt a batman villian?".lower()
+        a = "Joker"
+        b = "Scarecrow"
+        c = "Loki"
+        d = "Penguin"
+        answer = input (QUESTION_FORMAT.format(question2, a, b, c, d)).lower()
+        if answer == c or answer == "c":
+            print ("Correct! you got 5 points.")
+            score += 5
+            print(random.choice (GOOD_COMMENTS))
+            break
+        elif answer == "":
+            print ("Not sure?")
+        elif  answer != a and answer != "a" and answer != b and answer != "b" and answer != c and answer != "c" and answer != d and answer != "d":
+            print ("That wasnt an option")
+        else:
+            print("Incorrect")
+            print(random.choice (BAD_COMMENTS))
+                
+        #Tell them the correct answer
+        question_atempts -=1
+    print ("The answer is Loki")
+
+    question_atempts = tries
+    while question_atempts > 0:
+
+        question3 = "What city does miles morales live in?".lower()
+        a = "Seattle"
+        b = "Brooklyn"
+        c = "Chicago"
+        d = "Portland"
+        answer = input (QUESTION_FORMAT.format(question3, a, b, c, d)).lower()
+        if answer == b or answer == "b":
+            print ("Correct! you got 5 points.")
+            score += 5
+            print(random.choice (GOOD_COMMENTS))
+            break
+        elif answer == "":
+            print ("Not sure?")
+        elif  answer != a and answer != "a" and answer != b and answer != "b" and answer != c and answer != "c" and answer != d and answer != "d":
+                print ("That wasnt an option")
+        else:
+            print("Incorrect")
+            print(random.choice (BAD_COMMENTS))
+
+        #Tell them the correct answer
+        question_atempts -=1
+        print ("The answer is Brooklyn")
