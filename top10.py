@@ -1,4 +1,4 @@
-
+#----FUNCTIONS---
 guesses = []
 MUSIC_ARTIST_ANSWERS = ["the weeknd", "taylor swift", "post malone", "rihanna", 
                         "ariana grande", "billie eilish", "drake", "dua lipa", 
